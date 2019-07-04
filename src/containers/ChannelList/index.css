@@ -1,0 +1,10 @@
+
+.channel-list {
+    background-color: var(--purple);
+    height: 100%;
+    width: 300px;
+}
+
+.channel-link {
+    color: var(--white)
+}

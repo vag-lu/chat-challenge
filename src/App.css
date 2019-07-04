@@ -1,0 +1,33 @@
+/* See index.css for color variables */
+
+.App {
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.PlaceholderMessage {
+  color: var(--gray-lighter);
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+
+.ApiReferenceLink {
+  border-bottom: 1px solid var(--purple);
+  display: inline-block;
+  background-color: solid var(--purple);
+  font-size: .8em;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.ApiReferenceLink:hover {
+  color: var(--gray);
+}
