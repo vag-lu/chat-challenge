@@ -5,6 +5,15 @@ import './index.css'
 
 class PlaceHolderMessage extends Component {
 
+    componentDidUpdate() {
+        const element = document.querySelector('.placeHolder');
+        const observer = new MutationObserver(() => {
+            element.scrollTop = element.scrollHeight;
+        });
+        const config = { childList: true };
+        observer.observe(element, config);
+    }
+
     render() {
 
         const {
@@ -13,15 +22,16 @@ class PlaceHolderMessage extends Component {
         } = this.props
 
         return (
-            <div>
+            <div className="placeWrapper">
                 <div className="placeHeader">
-                    {selectedChannel !== null && <h3># {selectedChannel.name}</h3>}
+                    {selectedChannel !== null && <span># {selectedChannel.name}</span>}
                 </div>
-                <div className="placeHolder">
+                <div ref={(el) => { this.messagesEnd = el; }} className="placeHolder">
                     {msgToShow.map((message) => (
                         <Message message={message} />
                     ))}
                 </div>
+                <div className="placeMessageInput"></div>
             </div>
         )
     }

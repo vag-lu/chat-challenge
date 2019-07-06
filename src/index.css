@@ -19,6 +19,12 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100px;
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
 }
 
 * {
