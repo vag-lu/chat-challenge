@@ -1,0 +1,20 @@
+
+.placeHolder {
+    padding: 20px;
+    margin-left: 300px;
+    overflow: auto;
+    height: 100%;    
+    background-color: var(--white);
+}
+
+.placeHeader {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+    display: block;
+}
+
+.placeHeader h3 {
+    margin-left: 300px;
+    padding: 20px;
+}
